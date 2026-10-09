@@ -1,0 +1,141 @@
+<!DOCKTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Happy Birthday, My Love</title>
+<style> 
+  :root{
+  /* Your custom romantic palette*/
+ --bg-pink: #fce4ec;  /* The original soft pink */
+  --bg-lavender: #e6e6fa;  /* The cooling light lavender */
+  --accent-pink: #ff4081;  /* Vibrant pink for dots and buttons */
+  --text-main: #333333;
+}
+
+body {
+  /* The romantic and cooling gradient */
+  background: linear-gradient(135deg, var(--bg-pink) 0%, var(--bg-lavender) 100%);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Seoge UI', Tanhoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; /* Prevents scrolling*/
+}
+
+/*---PHASE 1: PASSCODE SCREEN ---*/
+
+  .passcode-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px
+    box-shadow: 0 10px 30px rgba(230, 230, 250, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    width: 350px;
+    text-align: center;
+  }
+
+  .polaroid {
+    background: white;
+    padding: 10px 10px 20px 10px;
+    border-radius: 8px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.8);
+    margin-bottom: 25px;
+  }
+
+  .polaride img {
+    width: 180px;
+    height: 180px
+    objecct-fit: cover;
+    border-radius: 5px;
+  }
+
+  .polaroid p {
+    margin: 10px 0 0 0;
+    font-size:16px;
+    color: var(--text-main);
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .passcode-section h2 {
+    margin: 0 0 20px 0;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .dots {
+    display: flex;
+    gap:12px;
+    margin-bottom: 25px;
+    justify-content: center;
+  }
+
+  .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+
+  .dot.filled {
+    background-color: var(--accent-pink);
+  }
+
+  .keypad {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    width: 100%;
+  }
+
+  .key {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: none;
+    background: #f7f7f7;
+    font-size: 20px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .key:active {
+    transform: scale(0.95);
+    background: var(--bg-lavender);
+  }
+
+  .key.icon {
+    background: transparent;
+    color: var(--accent-pink);
+    font-size: 24px;
+  }
+</style>
+</head>
+  
+<body>
+
+  <!-- PHASE1: PASSCODE -->
+  <div class="passcode-container" id="phase-1">
+    <div class="polaroid">
+      <!-- Replace this URL with a link to a photo of you two later -->
+  
+</body>    
+
+
+
+
+
+  
+  
+  
