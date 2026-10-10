@@ -153,9 +153,58 @@ body {
   <button class="key" onclick="pressKey('9')">9</button>
   <button class="key icon"></button>
   <button class="key" onclick="presskey('0')">0</button>
+  <button class="key icon" onclick="deleteKey()">&#x232B;</button>
+      </div>
+    </div>
+  </div>
 
-    
+<script>
+  let passcode = "";
+  // Set your password or a special 4-digit number here
+  const correctPasscode= "0506";
+
+  function updateDots() {
+    for (let i = 1; i <=4; i++) {
+      const dot = document.getElementById('dot-${i}');
+      if (i <=passcode.length) {
+        dot.classList.add('filled');
+      } else {
+        dot.classList.remove('filled');
+      }
+    }
+  }
+
+  function pressKey(num) {
+    if (passcode.length < 4) {
+      passcode += num;
+      updateDots();
+
+      if (passcode.length === 4) {
+        setTimeout(checkPasscode, 300);
+      }
+    }
+  }
+
+  function deleteKey() {
+    if (passcode.length > 0) {
+      passcode = passcode.slice(0, -1);
+      updateDots();
+    }
+  }
+
+  function checkPasscode() {
+    if (passcode === correctPasscode) {
+      alert("Passcode Correct! Ready to trigger Phase 2.");
+      //The code tom switch to the "Pull the String" phase will go right here
+    } else {
+      //Small shake animation could be added here later
+      passcode = "";
+      updateDots();
+    }
+  }
+</script>  
 </body>    
+</html>  
 
 
 
